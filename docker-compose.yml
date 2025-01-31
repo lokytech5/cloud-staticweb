@@ -2,9 +2,12 @@ services:
   static-web:
     build: .
     ports:
-      - "3000:3000"
+      - "3000:3000" # Ensure this is correctly mapping the container port to the host
     networks:
       - app-network
+    environment:
+      - HOST=0.0.0.0 # Ensures Next.js listens on all network interfaces
+      - PORT=3000
 
 networks:
   app-network:

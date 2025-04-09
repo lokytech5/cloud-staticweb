@@ -16,6 +16,6 @@ export default {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['dim'],
+    themes: ['autumn'],
   },
 } satisfies Config;

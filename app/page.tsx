@@ -2,62 +2,52 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="">
-      <main className="hero min-h-screen">
-        <div className="hero-content bg-base-100 min-h-screen w-full relative overflow-hidden">
-          {/* Decorative background ring */}
-          <div className="absolute inset-0 pointer-events-none opacity-10">
-            <div className="w-[40rem] h-[40rem] bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl absolute -top-40 -left-40" />
+    <div className="bg-white font-sans">
+      <main className="min-h-screen flex flex-col lg:flex-row">
+        {/* Left Section: Text Content */}
+        <div className="lg:w-1/2 bg-gradient-to-b from-teal-50 to-white flex flex-col justify-center p-8 lg:p-16">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">
+            Master Your Taxes with Ease
+          </h1>
+          <p className="text-lg text-gray-600 mb-6 max-w-md leading-relaxed">
+            Transform your financial management with our cutting-edge <span className="font-semibold text-teal-600">Financial-Tax System</span>. Automate tax filings, track expenses, and gain insights with powerful analytics—all in a secure, user-friendly platform.
+          </p>
+          <div className="flex gap-4">
+            <button className="bg-teal-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-700 transition">
+              Try It Now
+            </button>
+            <button className="border-2 border-teal-600 text-teal-600 px-6 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
+              Watch Demo
+            </button>
           </div>
+        </div>
 
-          <div className="hero-content text-left max-w-4xl px-4 sm:px-8 z-10">
-            <div>
-              <p className="uppercase tracking-wider text-sm text-secondary font-medium mb-4">
-                Your All-in-One Finance Toolkit
-              </p>
-              <h1 className="text-5xl font-bold text-primary leading-tight">
-                Financial Trading System
-              </h1>
-              <p className="py-6 text-base-content text-lg max-w-2xl leading-relaxed">
-                Take full control of your <span className="font-semibold text-secondary">business or personal finances</span> with <span className="font-semibold text-secondary">real-time analytics</span>, automated budgeting, and secure data—all in one powerful platform.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button className="btn btn-primary">Get Started</button>
-                <button className="btn btn-outline">Request a Demo</button>
-              </div>
-            </div>
+        {/* Right Section: Visual */}
+        <div className="lg:w-1/2 relative flex items-center justify-center p-8 lg:p-16 bg-teal-700">
+          <div className="absolute inset-0 opacity-10">
+            <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#ffffff_0,_transparent_70%)]" />
+          </div>
+          <div className="relative z-10">
+            <Image
+              src="/images.png"
+              alt="Financial-Tax System Dashboard"
+              width={600}
+              height={400}
+              className="rounded-lg shadow-2xl"
+            />
           </div>
         </div>
       </main>
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src="/file.svg" alt="File icon" width={16} height={16} />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src="/window.svg" alt="Window icon" width={16} height={16} />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image src="/globe.svg" alt="Globe icon" width={16} height={16} />
-          Go to nextjs.org →
-        </a>
+      <footer className="bg-gray-900 text-white py-6">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
+          <p className="text-sm">© 2025 Financial-Tax System. All rights reserved.</p>
+          <div className="flex gap-6">
+            <a href="/support" className="text-sm hover:text-teal-400 transition">Support</a>
+            <a href="/pricing" className="text-sm hover:text-teal-400 transition">Pricing</a>
+            <a href="/about" className="text-sm hover:text-teal-400 transition">About</a>
+          </div>
+        </div>
       </footer>
     </div>
   );

@@ -22,7 +22,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Section: Visual */}
+        {/* Right Section: Visua*/}
         <div className="lg:w-1/2 relative flex items-center justify-center p-8 lg:p-16 bg-teal-700">
           <div className="absolute inset-0 opacity-10">
             <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#ffffff_0,_transparent_70%)]" />

@@ -1,5 +1,5 @@
 app:
   tech: typescript
   external_port: 80 
-  internal_port: 8000  
+  internal_port: 3000  
   health: /health

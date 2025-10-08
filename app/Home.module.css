@@ -1,0 +1,12 @@
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+  
+  .floatAnimation {
+    animation: float 4s ease-in-out infinite;
+  }
+  
+  .gradientOverlay {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(255, 94, 0, 0.2));
+  }
